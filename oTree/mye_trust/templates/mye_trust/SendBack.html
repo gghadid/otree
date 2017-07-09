@@ -1,0 +1,20 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+    Trust Game: Your Choice
+{% endblock %}
+
+{% block content %}
+
+{% include 'mye_trust/Instructions.html' %}
+
+    <p>
+        You are Participant B. Please select how much you want to send back.
+    </p>
+    
+{% formfield group.sent_back_amount with label="How much do you want to send back?" %}
+
+{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load staticfiles otree_tags %}
+
+{% block title %}
+Results
+{% endblock %}
+
+{% block content %}
+
+{% if player.id_in_group == 1 %}
+    <p>
+        You sent Participant B {{ group.sent_amount }}.
+    </p>
+{% else %}
+    <p>
+        You returned {{group.sent_back_amount}}.
+    </p>
+
+{% endif %}
+
+   <p>{% next_button %}</p>
+
+
+    {% include 'mye_trust/Instructions.html' %}
+
+{% endblock %}
+
